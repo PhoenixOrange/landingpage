@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*------------------------------ Estilos Generales ------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Se añade esta propiedad para que al hacer clic en los botones de las diferentes secciones la transición sea suave, y no un salto */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#3A5154,#1D2625);
+    color: #B9B0B2;
+}
+.container {
+    width: 1460px;
+    height: 100%;
+    margin: auto;
+}
+.slide,
+.form button {
+    font-family: 'Roboto', sans-serif;
+    width: fit-content;
+    background: #b7673C;
+    color: #1D2625;
+    border-radius: 20px;
+    padding: 5px 20px;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;
+    line-height: 2em;
+    font-weight: 500;
+    transition: .3s ease;
+}
+.slide:hover,
+.form button:hover {
+    background: #B9B0B2;
+}
+#sobre-mi .titulo,
+#portfolio .titulo,
+#contacto .titulo,
+#cv .titulo {
+    color: #b7673C;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 900;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+}
+/*------------------------------ Estilos Header ------------------------------*/
+.main-header {
+    position: fixed;
+    width: 100%;
+    background-color: #3A5154;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1460px;
+    margin: auto;
+    padding: 20px 0;
+}
+.main-header .container .logo .nombre {
+    font-size: 32px;
+    text-decoration: none;
+    color: #1D2625;
+    transition: .3s ease;
+}
+.main-header .container .logo .nombre:hover,
+.main-header .container .logo .nombre .inicial {
+    color: #ff8006;
+}
+.nav .navbar {
+    list-style: none;
+    display: flex;
+    text-transform: uppercase;
+}
+.nav .navbar .nav-item {
+    margin-left: 2em;
+}
+.nav-link {
+    text-decoration: none;
+    color: #B9B0B2;
+    transition: .3s ease;
+    position: relative;
+    padding: 5px 20px;
+}
+.nav-link::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-bottom: 2px solid #ff8006;
+    border-radius: 20px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .3s ease;
+}
+.nav-link:hover {
+    color: #ff8006;
+}
+.nav-link:hover::before {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+/*------------------------------ Estilos Landing ------------------------------*/
+#landing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+.text_landing {
+    color: #b7673C;
+    margin-bottom: .5em;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 900;
+    font-size: 4em;
+    line-height: .8em;
+}
+.subtext_landing {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 2.5em;
+    margin-bottom: 20px;
+}
+.img_principal {
+    text-align: center;
+}
+.img_principal img {
+    width: 80%;
+    margin: auto;
+}
+/*------------------------------ Estilos Sobre Mí ------------------------------*/
+#sobre-mi {
+    padding: 100px 0;
+}
+#sobre-mi .titulo {
+    text-align: center;
+}
+div.seccionsobre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.5rem;
+    margin: auto;
+    max-width: 100%;
+    padding-top: 30px;
+}
+div.textabout{
+    width: 600px;
+    height: 300px;
+    border: 2px solid #1D2625;
+    border-radius: 20px;
+    box-shadow: 0px 2px 15px 2px #1D2625;
+    padding: 10px;
+}
+div.dmp{
+    text-align: center;
+    padding: 20px 0;
+}
+p.psob{
+    padding: 10px;
+    text-align: justify;
+}
+img.isob{
+    width: 300px;
+}
+/*------------------------------ Estilos Portfolio ------------------------------*/
+#portfolio {
+    padding: 100px 0;
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 0 50px;
+}
+.project {
+    background-color: #3A5154;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
+.project img {
+    width: 100%;
+}
+.project a {
+    text-decoration: none;
+    color:#B7673C;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    transition: .3s ease;
+}
+.project a:hover {
+    color: #929AA2;
+}
+/*------------------------------ Estilos Contacto ------------------------------*/
+#contacto {
+    padding: 100px 0;
+}
+#contacto .titulo {
+    text-align: center;
+}
+.form {
+    max-width: 700px;
+    margin: 50px auto;
+}
+.form .formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border: none;
+}
+.form legend{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.form .formulario input,
+.form .formulario select,
+.form .formulario textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3A5154;
+    color: #B9B0B2;
+    resize: none;
+}
+.form .formulario input:not(:last-child) {
+    margin-bottom: 30px;
+}
+.form button {
+    border: none;
+    line-height: inherit;
+    cursor: pointer;
+}
+/*------------------------------ Estilos CV ------------------------------*/
+#cv {
+    color: #B9B0B2;
+    background-color: #1D2625;
+    padding: 100px 0;
+}
+.cv-intro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.cv-intro img {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    margin: 0px 20px 0 0;
+}
+.cv-section h3 {
+    color: #B7673C;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.cv-section ul {
+    list-style: none;
+    padding: 0;
+}
+.cv-section div.experiencia{
+    margin-top: 10px;
+    border-bottom: 2px solid #ff8006;
+}
+.cv-section li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.cv-section li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.skills-list li {
+    display: inline-block;
+    margin-right: 15px;
+    background-color: #3A5154;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/*------------------------------ Estilos Footer ------------------------------*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: #3A5154;
+    align-items: center;
+}
+.footer .icons a {
+    color: #929AA2;
+    font-size: 1.5em;
+    transition: .3s ease;
+}
+.footer .icons a:hover {
+    color: #B7673C;
+}
+.footer .txtfooter {
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    line-height: 1.2em;
+}

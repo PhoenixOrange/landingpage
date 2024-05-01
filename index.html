@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
+    <title>Portfolio de Álvaro Naranjo</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="nombre">Álvaro <span class="inicial">N</span>aranjo</a>
+            </div>
+            <nav class="nav">
+                <ul class="navbar">
+                    <li class="nav-item"><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="resume.html" class="nav-link">CV</a></li>
+                    <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="landing">
+        <div class="container">
+            <div class="texto_landing">
+                <h2 class="text_landing">DESARROLLADOR FULLSTACK</h2>
+                <div class="subtext_landing">
+                    <p>Especialista en frontend <br> Técnico Superior en Administración de Sistemas en Red</p>     
+               </div>
+               <div class="btn_landing">
+                    <a class="slide" href="resume.html">Accede a mi CV</a>
+                    <a class="slide" href="#sobre-mi">Conóceme más</a>
+               </div>
+            </div>
+            <div class="img_principal">
+                <img src="img/development.png" alt="Imagen relacionada con desarrollo web">
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi">
+        <div class="container">
+            <h2 class="titulo">Sobre mí</h2>
+            <div class="seccionsobre">
+                <div class="textabout">
+                    <p class="psob">Madrileño de 35 años, tras una vida dedicada al sector de los libros, decidí cambiar radicalmente mi carrera
+                        y convertirme en un profesional de la informática, más concretamente, del desarrollo web.
+                        Ahora busco afianzar mi carrera profesional aplicándome a fondo en la que es mi verdadera pasión.
+                    </p>
+                    <p class="psob">
+                        He comenzado mi formación en el campo cursando el CFGS en Administración de Sistemas Informáticos en Red en la Universidad
+                        Internacional de la Rioja, y pretendo ampliarla mediante formación especializada en este campo.
+                    </p>
+                    <div class="dmp"><a class="slide" href="#portfolio">Descubre mi portfolio</a></div>
+                </div>
+                <img src="img/profile2.png" alt="Retrato Álvaro Naranjo" class="isob">
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="titulo">Portfolio</h2>
+        </div>
+        <div class="grid-container">
+            <!-- Mockup display from designwarrior on Freepik: https://www.freepik.com/free-psd/3d-interface-website-presentation-mockup-isolated_23126615.htm#query=website%20mockup&position=4&from_view=keyword&track=ais&uuid=e6c33e41-a080-42d3-85e4-7e4535242438 -->
+            <div class="project">
+                <img src="img/proy1.jpg" alt="Web Arkanoid">
+                <h3>Mockup juego Arkanoid</h3>
+                <p>Realizado en 60 minutos con HTML y CSS</p>
+                <p><a href="https://phoenixorange.github.io/parcial2t/" target="_blank">Enlace al proyecto</a></p>
+            </div>
+            <div class="project">
+                <img src="img/proy2.jpg" alt="Web Cexoal">
+                <h3>Web empresa viajes espaciales</h3>
+                <p>Trabajo en grupo realizado con HTML y CSS</p>
+                <p><a href="https://phoenixorange.github.io/webresponsive/" target="_blank">Enlace al proyecto</a></p>
+            </div>
+            <div class="project">
+                <img src="img/proy3.jpg" alt="Web Personal">
+                <h3>Porftolio personal</h3>
+                <p>Proyecto realizado con HTML y CSS</p>
+                <p><a href="https://phoenixorange.github.io/landingpage/" target="_blank">Enlace al proyecto</a></p>
+            </div>
+            <div class="project">
+                <img src="img/proy6.jpg" alt="Formulario de Contacto">
+                <h3>Formulario de contacto</h3>
+                <p>Proyecto realizado con HTML y CSS</p>
+                <p><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-forms-by-building-a-registration-form/step-65">Enlace al proyecto</a></p>
+            </div>
+            <div class="project">
+                <img src="img/proy4.jpg" alt="Bases de Datos">
+                <h3>Backend - Creación BBDD</h3>
+                <p>Proyecto realizado con Workbench (MySQL)</p>
+                <p><a href="files/bbdd.pdf" target="_blank">Enlace al proyecto</a></p>
+            </div>
+            <div class="project">
+                <img src="img/proy5.jpg" alt="Redes">
+                <h3>Backend - Redes</h3>
+                <p>Direccionamiento IPv6</p>
+                <p><a href="files/redes.pdf" target="_blank">Enlace al proyecto</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2 class="titulo">Formulario de contacto</h2>
+        <div class="form">
+        <form action="mailto:alvaro@phoenixorange.com" method="POST">
+            <fieldset class="formulario" id="persdata">
+                <legend>Datos personales</legend>
+                <input type="text" name="nombre" placeholder="Nombre*" required>
+                <input type="text" name="apellidos" placeholder="Apellidos">
+                <input type="email" name="email" placeholder="Email*" required>
+            </fieldset>
+            <fieldset class="formulario">
+                <legend>¿Cómo me has conocido?</legend>
+                <select name="como-conociste">
+                    <option value="">Selecciona una opción</option>
+                    <option value="Referido">Referido</option>
+                    <option value="Amigo">Amigo</option>
+                    <option value="Google/Buscador">Google/Buscador</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </fieldset>
+            <fieldset class="formulario">
+                <legend>Comentarios</legend>
+                <textarea name="comentarios" placeholder="Comentarios (máximo 500 caracteres)" maxlength="500"></textarea>
+            </fieldset>
+            <button type="submit">Enviar formulario</button>
+        </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="icons">
+            <a href="https://github.com/PhoenixOrange" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/alvaronaranjog/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+        <div class="txtfooter">
+            <p>Web desarrollada para Lenguaje de Marcas</p>
+            <p>Derechos reservados &copy; 2024 Álvaro Naranjo</p>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
